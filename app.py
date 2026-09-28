@@ -65,28 +65,3 @@ value=70.0,
 step=1.0
 )
 
-# Realizar predicción
-
-if st.button("Predecir Attack", use_container_width=True):
-
-```
-# Crear DataFrame respetando exactamente los nombres
-# de variables utilizados durante el entrenamiento
-datos = pd.DataFrame({
-    "HP": [hp],
-    "Defense": [defense],
-    "Sp. Atk": [sp_atk],
-    "Sp. Def": [sp_def],
-    "Speed": [speed]
-})
-
-# Predicción
-prediccion = modelo.predict(datos)[0]
-
-# Mostrar resultado
-st.success(f"⚔️ Attack estimado: {prediccion:.2f}")
-
-st.write("### Datos ingresados")
-st.dataframe(datos, use_container_width=True)
-```
-

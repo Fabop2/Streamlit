@@ -64,4 +64,20 @@ max_value=300.0,
 value=70.0,
 step=1.0
 )
+# Botón de predicción
+if st.button("Predecir Attack"):
 
+    datos = pd.DataFrame({
+        "HP": [hp],
+        "Defense": [defense],
+        "Sp. Atk": [sp_atk],
+        "Sp. Def": [sp_def],
+        "Speed": [speed]
+    })
+
+    prediccion = modelo.predict(datos)[0]
+
+    st.success(f"⚔️ Attack estimado: {prediccion:.2f}")
+
+    st.write("### Datos ingresados")
+    st.dataframe(datos)

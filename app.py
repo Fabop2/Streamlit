@@ -1,7 +1,7 @@
 import streamlit as st
-import joblib
-import pandas as pd
 
+st.title("🔥 Prueba Streamlit")
+st.write("Si puedes ver esto, Streamlit funciona correctamente.")
 # Configuración de la página
 
 st.set_page_config(
